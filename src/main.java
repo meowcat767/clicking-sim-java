@@ -114,8 +114,8 @@ class SoundHelper {
                 Clip clip = AudioSystem.getClip();
                 clip.open(audioIn);
                 clip.start();
-            } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
-                ex.printStackTrace();
+            } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) { // catch weird ahh files from clip
+                ex.printStackTrace(); // print the stack incase of a catch
             }
         }).start();
     }
